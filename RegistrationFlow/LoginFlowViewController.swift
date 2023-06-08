@@ -13,6 +13,7 @@ final class LoginFlowViewController: UIViewController {
         super.viewDidLoad()
         
     }
+
     
     @IBAction func forgotUserNameButton() {
         showAlert(title: "Your User Name:", message: "Rustam")
@@ -31,13 +32,19 @@ private extension LoginFlowViewController {
             message: message,
             preferredStyle: .actionSheet
         )
-        
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-//            self.textField.text = ""
-        }
-        
+
+        let okAction = UIAlertAction(title: "OK", style: .default)
+
         alert.addAction(okAction)
 
-        present(alert, animated: true)  // отображение экрана
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - Hide keyboard by tap
+private extension LoginFlowViewController {
+    internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+//        super .touchesBegan(touches, with: event)
     }
 }
