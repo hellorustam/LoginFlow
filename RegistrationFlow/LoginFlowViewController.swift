@@ -24,32 +24,38 @@ final class LoginFlowViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameDidTapped() {
-        showAlert(title: "Your User Name:", message: "Rustam")
+        showAlert(title: "Your User Name:", message: "Rustam", passwordClear: false)
     }
     
     @IBAction func forgotPasswordDidTapped() {
-        showAlert(title: "Your Password:", message: "XOXO")
+        showAlert(title: "Your Password:", message: "XOXO", passwordClear: false)
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
 // MARK: - Sign In
 extension LoginFlowViewController {
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let profileData = segue.destination as? LoginFlowViewController else { return }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let profileData = segue.destination as? LoginFlowViewController else { return }
+        
+    }
     
   private  func logInUser() {
         if userNameTextField.text == "Rustam" && passwordTextField.text == "XOXO" {
             print("got it")
         } else {
-            showAlert(title: "⚠️ Something wrong", message: "Username or Password is not correct. Try again.")
+            showAlert(title: "⚠️ Something wrong", message: "Username or Password is not correct. Try again.", passwordClear: true)
         }
     }
 }
 
 // MARK: - UIAlertController
 private extension LoginFlowViewController {
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String, message: String, passwordClear: Bool) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -57,7 +63,9 @@ private extension LoginFlowViewController {
         )
 
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTextField.text = ""
+            if passwordClear == true {
+                self.passwordTextField.text = ""
+            }
         }
 
         alert.addAction(okAction)
