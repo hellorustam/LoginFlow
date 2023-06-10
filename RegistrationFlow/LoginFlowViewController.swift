@@ -46,7 +46,7 @@ extension LoginFlowViewController {
         profileData.userName = userNameTextField.text
     }
     
-    private  func logInUser() {
+    private func logInUser() {
         if userNameTextField.text == userName && passwordTextField.text == password {
             performSegue(withIdentifier: "showProfileVC", sender: nil)
         } else {

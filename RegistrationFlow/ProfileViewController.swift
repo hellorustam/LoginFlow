@@ -7,14 +7,24 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var userPictureView: UIImageView!
     
     var userName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = userName
+        profileSettings()
     }
+}
 
+// MARK: - Profile Settings
+private extension ProfileViewController {
+    func profileSettings() {
+        userPictureView.layer.cornerRadius = userPictureView.frame.width / 2
+        userPictureView.image = UIImage(named: "myProfilePicture")
+        userPictureView.contentMode = .scaleAspectFill
+        userNameLabel.text = "Welcome \(String(userName))"
+    }
 }
