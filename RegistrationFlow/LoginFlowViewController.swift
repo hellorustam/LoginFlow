@@ -14,21 +14,23 @@ final class LoginFlowViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-
+    private let userName = "Rustam"
+    private let password = "XOXO"
+    
     // MARK: - IBActions
     @IBAction func signInDidTapped() {
         logInUser()
     }
     
-    @IBAction func forgotUserNameDidTapped() {
-        showAlert(title: "Your User Name:", message: "Rustam", passwordClear: false)
-    }
     
-    @IBAction func forgotPasswordDidTapped() {
-        showAlert(title: "Your Password:", message: "XOXO", passwordClear: false)
+    
+    @IBAction func forgotDidTapped(_ sender: UIButton) {
+        if sender.tag == 0 {
+            showAlert(title: "Your User Name:", message: "Rustam", passwordClear: false)
+        } else {
+            showAlert(title: "Your Password:", message: "XOXO", passwordClear: false)
+        }
+        
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -40,13 +42,13 @@ final class LoginFlowViewController: UIViewController {
 // MARK: - Sign In
 extension LoginFlowViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let profileData = segue.destination as? LoginFlowViewController else { return }
-        
+        guard let profileData = segue.destination as? ProfileViewController else { return }
+        profileData.userName = userNameTextField.text
     }
     
-  private  func logInUser() {
-        if userNameTextField.text == "Rustam" && passwordTextField.text == "XOXO" {
-            print("got it")
+    private  func logInUser() {
+        if userNameTextField.text == userName && passwordTextField.text == password {
+            performSegue(withIdentifier: "showProfileVC", sender: nil)
         } else {
             showAlert(title: "⚠️ Something wrong", message: "Username or Password is not correct. Try again.", passwordClear: true)
         }

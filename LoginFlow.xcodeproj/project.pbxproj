@@ -13,6 +13,7 @@
 		53FAAF392A31AA39004D1056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FAAF372A31AA39004D1056 /* Main.storyboard */; };
 		53FAAF3B2A31AA3B004D1056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FAAF3A2A31AA3B004D1056 /* Assets.xcassets */; };
 		53FAAF3E2A31AA3B004D1056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FAAF3C2A31AA3B004D1056 /* LaunchScreen.storyboard */; };
+		53FAAF462A34756F004D1056 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAAF452A34756F004D1056 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		53FAAF3A2A31AA3B004D1056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53FAAF3D2A31AA3B004D1056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53FAAF3F2A31AA3B004D1056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FAAF452A34756F004D1056 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				53FAAF312A31AA39004D1056 /* AppDelegate.swift */,
 				53FAAF332A31AA39004D1056 /* SceneDelegate.swift */,
 				53FAAF352A31AA39004D1056 /* LoginFlowViewController.swift */,
+				53FAAF452A34756F004D1056 /* ProfileViewController.swift */,
 				53FAAF372A31AA39004D1056 /* Main.storyboard */,
 				53FAAF3A2A31AA3B004D1056 /* Assets.xcassets */,
 				53FAAF3C2A31AA3B004D1056 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				53FAAF362A31AA39004D1056 /* LoginFlowViewController.swift in Sources */,
 				53FAAF322A31AA39004D1056 /* AppDelegate.swift in Sources */,
+				53FAAF462A34756F004D1056 /* ProfileViewController.swift in Sources */,
 				53FAAF342A31AA39004D1056 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
