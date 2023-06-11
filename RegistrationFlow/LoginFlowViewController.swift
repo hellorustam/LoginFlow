@@ -22,8 +22,6 @@ final class LoginFlowViewController: UIViewController {
         logInUser()
     }
     
-    
-    
     @IBAction func forgotDidTapped(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(title: "Your User Name:", message: "Rustam", passwordClear: false)
@@ -65,7 +63,7 @@ private extension LoginFlowViewController {
         )
 
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            if passwordClear == true {
+            if passwordClear {
                 self.passwordTextField.text = ""
             }
         }
@@ -79,6 +77,7 @@ private extension LoginFlowViewController {
 // MARK: - Hide keyboard by tap
 extension LoginFlowViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
