@@ -110,7 +110,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Hzf-iK-hON">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ds4-y9-6SF" customClass="ProfileViewController" customModule="LoginFlow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ds4-y9-6SF" customClass="ProfileViewController" customModule="LoginFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Up-7L-L9k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,8 +183,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BcN-aH-Lit">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="r1V-NA-jlp">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Py7-NK-BPJ">
+                        <barButtonItem key="rightBarButtonItem" id="r1V-NA-jlp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Py7-NK-BPJ">
                                 <rect key="frame" x="222" y="8" width="82" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
