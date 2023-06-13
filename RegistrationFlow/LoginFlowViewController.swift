@@ -24,9 +24,9 @@ final class LoginFlowViewController: UIViewController {
     
     @IBAction func forgotDidTapped(_ sender: UIButton) {
         if sender.tag == 0 {
-            showAlert(title: "Your User Name:", message: "Rustam", passwordClear: false)
+            showAlert(title: "Your User Name:", message: userName, passwordClear: false)
         } else {
-            showAlert(title: "Your Password:", message: "XOXO", passwordClear: false)
+            showAlert(title: "Your Password:", message: password, passwordClear: false)
         }
         
     }
@@ -42,7 +42,7 @@ extension LoginFlowViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationController = segue.destination as? UINavigationController else { return }
         guard let profileData = navigationController.viewControllers.first as? ProfileViewController else { return }
-        profileData.userName = userNameTextField.text
+        profileData.userName = userName
     }
     
     private func logInUser() {
