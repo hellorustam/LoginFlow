@@ -39,6 +39,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		539607B32A65F6F400946926 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				53FAAF372A31AA39004D1056 /* Main.storyboard */,
+				53FAAF3C2A31AA3B004D1056 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		539607B42A65F72F00946926 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53FAAF312A31AA39004D1056 /* AppDelegate.swift */,
+				53FAAF332A31AA39004D1056 /* SceneDelegate.swift */,
+				53FAAF3F2A31AA3B004D1056 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		539607B52A65F76E00946926 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				53FAAF352A31AA39004D1056 /* LoginFlowViewController.swift */,
+				53FAAF452A34756F004D1056 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		53FAAF252A31AA39004D1056 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +86,10 @@
 		53FAAF302A31AA39004D1056 /* RegistrationFlow */ = {
 			isa = PBXGroup;
 			children = (
-				53FAAF312A31AA39004D1056 /* AppDelegate.swift */,
-				53FAAF332A31AA39004D1056 /* SceneDelegate.swift */,
-				53FAAF352A31AA39004D1056 /* LoginFlowViewController.swift */,
-				53FAAF452A34756F004D1056 /* ProfileViewController.swift */,
-				53FAAF372A31AA39004D1056 /* Main.storyboard */,
+				539607B42A65F72F00946926 /* App */,
+				539607B52A65F76E00946926 /* ViewControllers */,
+				539607B32A65F6F400946926 /* StoryBoards */,
 				53FAAF3A2A31AA3B004D1056 /* Assets.xcassets */,
-				53FAAF3C2A31AA3B004D1056 /* LaunchScreen.storyboard */,
-				53FAAF3F2A31AA3B004D1056 /* Info.plist */,
 			);
 			path = RegistrationFlow;
 			sourceTree = "<group>";
@@ -220,6 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -274,6 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -293,7 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HCX9ARGX7Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RegistrationFlow/Info.plist;
+				INFOPLIST_FILE = RegistrationFlow/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HCX9ARGX7Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RegistrationFlow/Info.plist;
+				INFOPLIST_FILE = RegistrationFlow/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

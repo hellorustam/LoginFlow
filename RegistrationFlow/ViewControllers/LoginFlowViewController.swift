@@ -23,12 +23,9 @@ final class LoginFlowViewController: UIViewController {
     }
     
     @IBAction func forgotDidTapped(_ sender: UIButton) {
-        if sender.tag == 0 {
-            showAlert(title: "Your User Name:", message: userName, passwordClear: false)
-        } else {
-            showAlert(title: "Your Password:", message: password, passwordClear: false)
-        }
-        
+        sender.tag == 0
+        ? showAlert(title: "Your User Name:", message: userName, passwordClear: false)
+        : showAlert(title: "Your Password:", message: password, passwordClear: false)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -68,9 +65,7 @@ private extension LoginFlowViewController {
                 self.passwordTextField.text = ""
             }
         }
-
         alert.addAction(okAction)
-
         present(alert, animated: true)
     }
 }
