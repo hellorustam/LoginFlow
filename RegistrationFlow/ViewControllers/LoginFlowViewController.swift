@@ -8,14 +8,13 @@
 import UIKit
 
 final class LoginFlowViewController: UIViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet var signInButton: UIButton!
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-
-    private let userName = "Rustam"
-    private let password = "XOXO"
+    
+    private let userData = User.getUser()
     
     // MARK: - IBActions
     @IBAction func signInDidTapped() {
@@ -24,8 +23,8 @@ final class LoginFlowViewController: UIViewController {
     
     @IBAction func forgotDidTapped(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Your User Name:", message: userName, passwordClear: false)
-        : showAlert(title: "Your Password:", message: password, passwordClear: false)
+        ? showAlert(title: "Your User Name:", message: userData.login, passwordClear: false)
+        : showAlert(title: "Your Password:", message: userData.password, passwordClear: false)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -39,11 +38,12 @@ extension LoginFlowViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationController = segue.destination as? UINavigationController else { return }
         guard let profileData = navigationController.viewControllers.first as? ProfileViewController else { return }
-        profileData.userName = userName
+        profileData.userName = userData.person.fullName
+        profileData.userAbout = userData.person.about
     }
     
     private func logInUser() {
-        if userNameTextField.text == userName && passwordTextField.text == password {
+        if userNameTextField.text == userData.login && passwordTextField.text == userData.password {
             performSegue(withIdentifier: "showProfileVC", sender: nil)
         } else {
             showAlert(title: "⚠️ Something wrong", message: "Username or Password is not correct. Try again.", passwordClear: true)

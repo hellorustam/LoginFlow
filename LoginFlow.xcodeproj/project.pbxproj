@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5309B85C2A65FD1800347663 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309B85B2A65FD1800347663 /* User.swift */; };
 		53FAAF322A31AA39004D1056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAAF312A31AA39004D1056 /* AppDelegate.swift */; };
 		53FAAF342A31AA39004D1056 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAAF332A31AA39004D1056 /* SceneDelegate.swift */; };
 		53FAAF362A31AA39004D1056 /* LoginFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FAAF352A31AA39004D1056 /* LoginFlowViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5309B85B2A65FD1800347663 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53FAAF2E2A31AA39004D1056 /* LoginFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FAAF312A31AA39004D1056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53FAAF332A31AA39004D1056 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5309B85D2A65FD2500347663 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5309B85B2A65FD1800347663 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		539607B32A65F6F400946926 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		53FAAF302A31AA39004D1056 /* RegistrationFlow */ = {
 			isa = PBXGroup;
 			children = (
+				5309B85D2A65FD2500347663 /* Models */,
 				539607B42A65F72F00946926 /* App */,
 				539607B52A65F76E00946926 /* ViewControllers */,
 				539607B32A65F6F400946926 /* StoryBoards */,
@@ -168,6 +179,7 @@
 				53FAAF362A31AA39004D1056 /* LoginFlowViewController.swift in Sources */,
 				53FAAF322A31AA39004D1056 /* AppDelegate.swift in Sources */,
 				53FAAF462A34756F004D1056 /* ProfileViewController.swift in Sources */,
+				5309B85C2A65FD1800347663 /* User.swift in Sources */,
 				53FAAF342A31AA39004D1056 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

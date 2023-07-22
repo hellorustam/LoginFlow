@@ -49,7 +49,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4F8-Pc-w2v">
                                         <rect key="frame" x="0.0" y="74.5" width="280" height="112"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpz-4k-KnB">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rustam" borderStyle="roundedRect" placeholder="User name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpz-4k-KnB">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="ViL-pn-Ji8"/>
@@ -57,7 +57,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-g0-6Vg">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="XOXO" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOG-g0-6Vg">
                                                 <rect key="frame" x="0.0" y="64" width="280" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="We1-sk-5OI"/>
@@ -116,42 +116,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-rN-C9T">
-                                <rect key="frame" x="59.5" y="109" width="201" height="350"/>
+                                <rect key="frame" x="48" y="151" width="224" height="266.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uh5-Hg-b4W">
-                                        <rect key="frame" x="36.5" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="48" y="0.0" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="4p7-CO-LOY"/>
                                             <constraint firstAttribute="width" constant="128" id="cZb-ub-Zvx"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESQ-Pp-4qB">
-                                        <rect key="frame" x="22" y="152" width="157" height="29"/>
+                                        <rect key="frame" x="33.5" y="152" width="157" height="29"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imb-XR-f4s">
-                                        <rect key="frame" x="12.5" y="205" width="176.5" height="83.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="🤖">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="AppleColorEmoji"/>
-                                                    <font key="NSOriginalFont" size="20" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" I'm IT enthusiast and I like to create Apps with Swift">
-                                                <attributes>
-                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <rect key="frame" x="112" y="205" width="0.0" height="0.0"/>
+                                        <attributedString key="attributedText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2qO-I9-Mbn">
-                                        <rect key="frame" x="0.0" y="312.5" width="201" height="37.5"/>
+                                        <rect key="frame" x="11.5" y="229" width="201" height="37.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-Ff-Ydi">
                                                 <rect key="frame" x="0.0" y="0.0" width="92.5" height="37.5"/>
@@ -178,14 +164,16 @@
                         <viewLayoutGuide key="safeArea" id="Q2O-IM-0XF"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="yRn-rN-C9T" firstAttribute="centerY" secondItem="8Up-7L-L9k" secondAttribute="centerY" id="7Dh-fh-cDp"/>
+                            <constraint firstItem="yRn-rN-C9T" firstAttribute="leading" secondItem="Q2O-IM-0XF" secondAttribute="leading" constant="48" id="EL9-Af-8LK"/>
                             <constraint firstItem="yRn-rN-C9T" firstAttribute="centerX" secondItem="8Up-7L-L9k" secondAttribute="centerX" id="LFj-5v-Vn2"/>
-                            <constraint firstItem="yRn-rN-C9T" firstAttribute="centerY" secondItem="8Up-7L-L9k" secondAttribute="centerY" id="yCJ-Mg-U8d"/>
+                            <constraint firstItem="Q2O-IM-0XF" firstAttribute="trailing" secondItem="yRn-rN-C9T" secondAttribute="trailing" constant="48" id="y13-g8-XPK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BcN-aH-Lit">
                         <barButtonItem key="rightBarButtonItem" id="r1V-NA-jlp">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Py7-NK-BPJ">
-                                <rect key="frame" x="222" y="8" width="82" height="34.5"/>
+                                <rect key="frame" x="222" y="5" width="82" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -197,6 +185,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="userAboutLabel" destination="imb-XR-f4s" id="grl-VE-obC"/>
                         <outlet property="userNameLabel" destination="ESQ-Pp-4qB" id="pmt-Ap-8JM"/>
                         <outlet property="userPictureView" destination="Uh5-Hg-b4W" id="772-wB-I1X"/>
                     </connections>

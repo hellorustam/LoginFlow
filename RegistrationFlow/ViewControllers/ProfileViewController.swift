@@ -9,9 +9,11 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var userAboutLabel: UILabel!
     @IBOutlet var userPictureView: UIImageView!
     
     var userName: String!
+    var userAbout: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +28,7 @@ private extension ProfileViewController {
         userPictureView.image = UIImage(named: "myProfilePicture")
         userPictureView.contentMode = .scaleAspectFill
         userNameLabel.text = "Welcome \(String(userName))"
+        userAboutLabel.textAlignment = NSTextAlignment.center
+        userAboutLabel.text = String(userAbout)
     }
 }
