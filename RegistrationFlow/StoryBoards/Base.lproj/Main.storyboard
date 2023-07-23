@@ -181,7 +181,8 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Facts" id="SmB-br-dyb">
                             <connections>
-                                <segue destination="fe6-UB-TMC" kind="show" id="WhI-C5-m25"/>
+                                <action selector="factsButton:" destination="ds4-y9-6SF" id="NyY-Fc-0bM"/>
+                                <segue destination="fe6-UB-TMC" kind="show" identifier="showFacts" id="WhI-C5-m25"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -204,8 +205,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STt-6G-Ldi">
-                                <rect key="frame" x="40" y="273.5" width="240" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STt-6G-Ldi">
+                                <rect key="frame" x="40" y="274" width="240" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.23476414239999999" green="0.75333412249999998" blue="0.00014483017000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -254,34 +255,68 @@
         <!--Aims-->
         <scene sceneID="ErY-I2-fUA">
             <objects>
-                <viewController id="0Rl-cC-PsG" sceneMemberID="viewController">
+                <viewController id="0Rl-cC-PsG" customClass="AimsViewController" customModule="LoginFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RlJ-ZJ-ZCe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbb-Jw-9xC">
+                                <rect key="frame" x="40" y="269.5" width="240" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Dcl-RB-Riz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.62206047684056542" green="0.65925082712875271" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kbb-Jw-9xC" firstAttribute="centerX" secondItem="RlJ-ZJ-ZCe" secondAttribute="centerX" id="6ML-DF-cy7"/>
+                            <constraint firstItem="Dcl-RB-Riz" firstAttribute="trailing" secondItem="kbb-Jw-9xC" secondAttribute="trailing" constant="40" id="Sms-KB-0Je"/>
+                            <constraint firstItem="kbb-Jw-9xC" firstAttribute="centerY" secondItem="RlJ-ZJ-ZCe" secondAttribute="centerY" id="XlE-Pa-eIx"/>
+                            <constraint firstItem="kbb-Jw-9xC" firstAttribute="leading" secondItem="Dcl-RB-Riz" secondAttribute="leading" constant="40" id="tO6-N4-Jkj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Aims" id="SOp-Du-0Qv">
                         <imageReference key="image" image="paperplane.fill" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="aimsLabel" destination="kbb-Jw-9xC" id="54i-ZT-Gwl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNI-bK-89D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2336" y="802"/>
         </scene>
-        <!--Item 3-->
+        <!--Story-->
         <scene sceneID="mNP-3l-mVt">
             <objects>
-                <viewController id="Uj9-Tu-khj" sceneMemberID="viewController">
+                <viewController id="Uj9-Tu-khj" customClass="StoryViewController" customModule="LoginFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1h-XP-Vq9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U6-8C-H1d">
+                                <rect key="frame" x="40" y="269.5" width="240" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.48908580781003308" green="0.51832616817791755" blue="0.65982086489898983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uoD-MO-AGe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="1U6-8C-H1d" firstAttribute="leading" secondItem="uoD-MO-AGe" secondAttribute="leading" constant="40" id="Udr-O5-3vW"/>
+                            <constraint firstItem="uoD-MO-AGe" firstAttribute="trailing" secondItem="1U6-8C-H1d" secondAttribute="trailing" constant="40" id="eHq-Uf-cO6"/>
+                            <constraint firstItem="1U6-8C-H1d" firstAttribute="centerY" secondItem="e1h-XP-Vq9" secondAttribute="centerY" id="hAw-x2-9Xx"/>
+                            <constraint firstItem="1U6-8C-H1d" firstAttribute="centerX" secondItem="e1h-XP-Vq9" secondAttribute="centerX" id="tvr-hW-SK9"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" id="luw-ij-DFG">
-                        <imageReference key="image" image="internaldrive.fill" catalog="system" symbolScale="medium"/>
+                    <tabBarItem key="tabBarItem" title="Story" id="luw-ij-DFG">
+                        <imageReference key="image" image="fossil.shell.fill" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="storyLabel" destination="1U6-8C-H1d" id="OeH-Qb-xgt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8y-Om-5Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,7 +327,7 @@
             <objects>
                 <navigationController title="BIO" automaticallyAdjustsScrollViewInsets="NO" id="gCQ-Te-tOp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bio" id="6dT-K2-Ffd">
-                        <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="medium"/>
+                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1S6-QH-loC">
@@ -311,14 +346,17 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="internaldrive.fill" catalog="system" width="128" height="87"/>
+        <image name="fossil.shell.fill" catalog="system" width="128" height="100"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

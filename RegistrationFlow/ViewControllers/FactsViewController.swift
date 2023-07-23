@@ -10,12 +10,9 @@ import UIKit
 final class FactsViewController: UIViewController {
     @IBOutlet var userFactsLabel: UILabel!
     
-//    private let userData = User.getUser()
-    
-    var userFacts: User!
+    var userFacts: String!
     
     override func viewDidLoad() {
-        userFactsLabel.text = userFacts.person.facts
-//        userFactsLabel.text = userData.person.facts
+        userFactsLabel.text = String(userFacts)
     }
 }

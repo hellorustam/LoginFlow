@@ -10,6 +10,9 @@ struct User {
     let password: String
     let person: Person
     
+    let aims: String
+    let coolStory: String
+    
     static func getUser() -> User {
        User(
             login: "Rustam",
@@ -18,8 +21,10 @@ struct User {
                 avatar: "myProfilePicture",
                 fullName: "Rustam Samiev",
                 about: "🤖 I'm IT enthusiast and I like to create Apps with Swift",
-                facts: "I like to CODE, DANCE & CHOCOLATE"
-            )
+                facts: "I like to CODE,\nDANCE & CHOCOLATE"
+            ),
+            aims: "Learn how to cook 28 meals & planning great travel trips",
+            coolStory: "🏕️\nOnce my friends and I gathered at the lake Kupavna. We grilled kebabs and sang songs all night long. But when we went to bed, our kebab was stolen by the 🦫 andatra."
         )
     }
 }

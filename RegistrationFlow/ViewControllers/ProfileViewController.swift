@@ -8,6 +8,8 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+    private let segueIdentifier = "showFacts"
+    
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var userAboutLabel: UILabel!
     @IBOutlet var userPictureView: UIImageView!
@@ -15,10 +17,22 @@ final class ProfileViewController: UIViewController {
     var userName: String!
     var userAbout: String!
     var userAvatar: String!
+    var userFacts: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         profileSettings()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifier {
+            guard let factsVC = segue.destination as? FactsViewController else { return }
+            factsVC.userFacts = userFacts
+        }
+    }
+    
+    @IBAction func factsButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: segueIdentifier, sender: nil)
     }
 }
 

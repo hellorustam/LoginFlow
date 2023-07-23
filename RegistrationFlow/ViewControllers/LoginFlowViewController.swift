@@ -40,17 +40,18 @@ extension LoginFlowViewController {
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
-            if let navigationVC = viewController as? UINavigationController {
-                guard let profileData = navigationVC.topViewController as? ProfileViewController else { return }
+            if let profileVC = viewController as? UINavigationController {
+                guard let profileData = profileVC.topViewController as? ProfileViewController else { return }
                 profileData.userName = userData.person.fullName
                 profileData.userAbout = userData.person.about
                 profileData.userAvatar = userData.person.avatar
+                profileData.userFacts = userData.person.facts
+            } else if let aimsVC = viewController as? AimsViewController {
+                aimsVC.userAims = userData.aims
+            } else if let storyVC = viewController as? StoryViewController {
+                storyVC.userStory = userData.coolStory
             }
         }
-        
-        guard let navigationVC = segue.destination as? UINavigationController else { return }
-        guard let profileData = navigationVC.viewControllers.first as? FactsViewController else { return }
-        profileData.userFacts = userData
     }
     
     private func logInUser() {
