@@ -36,10 +36,21 @@ final class LoginFlowViewController: UIViewController {
 // MARK: - Sign In
 extension LoginFlowViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationController = segue.destination as? UINavigationController else { return }
-        guard let profileData = navigationController.viewControllers.first as? ProfileViewController else { return }
-        profileData.userName = userData.person.fullName
-        profileData.userAbout = userData.person.about
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let navigationVC = viewController as? UINavigationController {
+                guard let profileData = navigationVC.topViewController as? ProfileViewController else { return }
+                profileData.userName = userData.person.fullName
+                profileData.userAbout = userData.person.about
+                profileData.userAvatar = userData.person.avatar
+            }
+        }
+        
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let profileData = navigationVC.viewControllers.first as? FactsViewController else { return }
+        profileData.userFacts = userData
     }
     
     private func logInUser() {
