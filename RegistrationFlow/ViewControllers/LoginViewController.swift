@@ -51,7 +51,7 @@ extension LoginViewController {
             }
         }
     }
-    
+
     private func logInUser() {
         if userNameTextField.text == userData.login
             && passwordTextField.text == userData.password {

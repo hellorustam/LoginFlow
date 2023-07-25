@@ -22,10 +22,8 @@ final class ProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdentifier {
             guard let factsVC = segue.destination as? FactsViewController else { return }
-            factsVC.userFacts = userData.person.facts
-        }
+            factsVC.userFacts = userData
     }
     
     @IBAction func factsButton(_ sender: UIBarButtonItem) {
