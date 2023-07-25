@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LoginFlowViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet var signInButton: UIButton!
@@ -34,28 +34,27 @@ final class LoginFlowViewController: UIViewController {
 }
 
 // MARK: - Sign In
-extension LoginFlowViewController {
+extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
             if let profileVC = viewController as? UINavigationController {
-                guard let profileData = profileVC.topViewController as? ProfileViewController else { return }
-                profileData.userName = userData.person.fullName
-                profileData.userAbout = userData.person.about
-                profileData.userAvatar = userData.person.avatar
-                profileData.userFacts = userData.person.facts
+                guard let profileData = profileVC.topViewController
+                        as? ProfileViewController else { return }
+                profileData.userData = userData
             } else if let aimsVC = viewController as? AimsViewController {
-                aimsVC.userAims = userData.aims
+                aimsVC.userAims = userData
             } else if let storyVC = viewController as? StoryViewController {
-                storyVC.userStory = userData.coolStory
+                storyVC.userStory = userData
             }
         }
     }
     
     private func logInUser() {
-        if userNameTextField.text == userData.login && passwordTextField.text == userData.password {
+        if userNameTextField.text == userData.login
+            && passwordTextField.text == userData.password {
             performSegue(withIdentifier: "showProfileVC", sender: nil)
         } else {
             showAlert(title: "⚠️ Something wrong", message: "Username or Password is not correct. Try again.", passwordClear: true)
@@ -64,7 +63,7 @@ extension LoginFlowViewController {
 }
 
 // MARK: - UIAlertController
-private extension LoginFlowViewController {
+private extension LoginViewController {
     func showAlert(title: String, message: String, passwordClear: Bool) {
         let alert = UIAlertController(
             title: title,
@@ -83,7 +82,7 @@ private extension LoginFlowViewController {
 }
 
 // MARK: - Hide keyboard by tap
-extension LoginFlowViewController {
+extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)

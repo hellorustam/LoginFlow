@@ -10,9 +10,9 @@ import UIKit
 final class AimsViewController: UIViewController {
     @IBOutlet var aimsLabel: UILabel!
     
-    var userAims: String!
+    var userAims: User!
     
     override func viewDidLoad() {
-        aimsLabel.text = String(userAims)
+        aimsLabel.text = userAims.aims
     }
 }

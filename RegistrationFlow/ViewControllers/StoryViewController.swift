@@ -10,9 +10,9 @@ import UIKit
 final class StoryViewController: UIViewController {
     @IBOutlet var storyLabel: UILabel!
     
-    var userStory: String!
+    var userStory: User!
     
     override func viewDidLoad() {
-        storyLabel.text = String(userStory)
+        storyLabel.text = userStory.coolStory
     }
 }
